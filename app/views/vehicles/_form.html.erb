@@ -1,0 +1,62 @@
+<%= form_for(vehicle) do |form| %>
+<% if vehicle.errors.any? %>
+<div id="error_explanation">
+<h2><%= pluralize(vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+<ul>
+<% vehicle.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+</ul>
+</div>
+<% end %>
+<div class="row">
+<div class="col-md-3">
+<%= form.label :name %>
+<%= form.text_field :name %>
+</div>
+<div class="col-md-3">
+<%= form.label :model_year %>
+<%= form.text_field :model_year %>
+</div>
+<div class="col-md-3">
+<%= form.label :vehicle_class %>
+<%= form.text_field :vehicle_class %>
+</div>
+<div class="col-md-3">
+<%= form.label :brand %>
+<%= form.text_field :brand %>
+</div>
+
+<div class="col-md-3">
+<%= form.label :model %>
+<%= form.text_field :model %>
+</div>
+<div class="field">
+<%= form.label :fuel_type %>
+<%= form.text_field :fuel_type %>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<%= form.label :purchase_date %>
+<%= form.date_field :purchase_date, class: 'form-control basicDate' %>
+</div>
+<div class="col-md-4">
+<%= form.label :fuel_capacity %>
+<%= form.text_field :fuel_capacity %>
+</div>
+
+
+<div class="field">
+<%= form.label :status %>
+<%= form.text_field :status %>
+</div>
+<div class="col-md-3">
+<%= form.label :code %>
+<%= form.text_field :code %>
+</div>
+
+<div class="actions">
+<%= form.submit %>
+</div>
+<% end %>
