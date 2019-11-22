@@ -3,25 +3,30 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>vehicle_class</th>
-      <td><%= @vehicle.vehicle_class %></td>
-      <th>brand</th>
-      <td><%= @vehicle.brand %></td>
-      <th>model</th>
-      <td><%= @vehicle.model %></td>
-    </tr>
-    <tr>
-      <th>model_year</th>
-      <td><%= @vehicle.model_year %></td>
-      <th>fuel_capacity</th>
-      <td><%= @vehicle.fuel_capacity %></td>
-      <th>fuel_type</th>
-      <td><%= @vehicle.fuel_type %></td>
-    </tr>
-    <tr>
-      <th>status</th>
+    <th>Name</th>
+      <td><%= @vehicle.name %></td>
+            <th>status</th>
       <td><%= @vehicle.status %></td>
-      <th>purchase_date</th>
+     </tr> 
+ <tr> 
+      <th>Vehicle Class</th>
+      <td><%= @vehicle.vehicle_class %></td>
+      <th>Brand</th>
+      <td><%= @vehicle.brand %></td>
+      </tr>
+      <tr>
+      <th>Model</th>
+      <td><%= @vehicle.model %></td>
+             <th>Model Year</th>
+      <td><%= @vehicle.model_year %></td>
+      </tr>
+      <tr>
+       <th>Fuel type</th>
+      <td><%= @vehicle.fuel_type %></td>
+      <th>Fuel Capacity</th>
+      <td><%= @vehicle.fuel_capacity %></td>
+     
+      <th>Purchase Date</th>
       <td><%= @vehicle.purchase_date %></td>
       <th></th>
       <td></td>
@@ -29,7 +34,7 @@
   </thead>
 </table>
 <p>
+<h5>created by nimbo</h5>
   <%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
   <%= link_to 'Back', vehicles_path %>
 </p>
-<h5>Yorumlar</h5>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<h4><i class="fa fa-truck fa-3x"></i> </h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <td><%= @driver.name %></td>
+      <th>Surname</th>
+      <td><%= @driver.surname %></td>
+      <th>Date of Birth</th>
+      <td><%= @driver.date_of_birth %></td>
+       <th></th>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Tc</th>
+      <td><%= @driver.tc %></td>
+      <th>Tel</th>
+      <td><%= @driver.tel %></td>
+      <th>Adress</th>
+      <td><%= @driver.adress %></td>
+    </tr>
+    
+  </thead>
+</table>
+<p>
+  <%= link_to 'Edit', edit_driver_path(@driver) %> |
+  <%= link_to 'Back', drivers_path %>
+</p>
+<h5>Yorumlar</h5>

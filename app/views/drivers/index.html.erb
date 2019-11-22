@@ -1,0 +1,71 @@
+<p id="notice"><%= notice %></p>
+
+<h1>DRIVERS</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>NAME&nbsp</th>
+      <th>SURNAME&nbsp</th>
+      <th>DATEOFBİRTH&nbsp</th>
+      <th>TC&nbsp</th>
+      <th>TEL&nbsp</th>
+      <th>ADRESS&nbsp</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drivers.each do |driver| %>
+      <tr>
+        <td><%= driver.name %></td>
+        <td><%= driver.surname %></td>
+        <td><%= driver.date_of_birth %></td>
+        <td><%= driver.tc %></td>
+        <td><%= driver.tel %></td>
+        <td><%= driver.adress %>&nbsp</td>
+
+        <td><%= link_to 'Show', driver %>&nbsp</td>
+        <td><%= link_to 'Edit', edit_driver_path(driver) %>&nbsp</td>
+        <td><%= link_to 'Destroy', driver, method: :delete, data: { confirm: 'Are you sure?' } %>&nbsp</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+
+<h2>Comments</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Comments:</th>
+    
+  </tr>
+  
+ 
+</table>
+ 
+     
+
+
+</body>
+</html>
+
+
+<br>
+
+
+
+<%= link_to 'New Driver', new_driver_path %>

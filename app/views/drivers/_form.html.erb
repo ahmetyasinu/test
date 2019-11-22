@@ -1,0 +1,60 @@
+<%= simple_form_for(driver) do |f| %>
+    <% if driver.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(driver.errors.count, "error") %> prohibited this driver from being saved:</h2>
+    <ul>
+    <% driver.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+    </ul>
+    </div>
+    <% end %>
+
+    <div class="row">
+        <div class="form-group">
+
+        <div class="col-md-6">
+        <%= f.input :name, label: "Name" %>
+        </div>
+        <div class="col-md-6">
+        <%= f.input :surname, label: "Surname" %>
+        </div>
+     </div>
+     </div>
+    <div class="row">
+    <div class="form-group">
+
+        <div class="col-md-6">
+            <%= f.input :date_of_birth, label: "Date of Birth" %>
+        </div>
+        <div class="col-md-6">
+        <%= f.input :tc, label: "Tc" %>
+        </div>
+        </div> 
+        </div>
+    <div class="row">
+    <div class="form-group">
+     <div class="col-md-6">
+        <%= f.input :tel, label: "Tel" %>
+        </div>
+    <div class="col-md-6">
+        <%= f.input :adress, label: "Adress" %>
+        </div>
+       </div>
+       </div>
+
+       
+
+    <div class="row">
+    <div class="form-group">
+
+    <div class="col-md-12">
+    <div class="actions">
+    <%= f.submit %>
+        </div>
+    </div>
+    </div>
+     </div>
+ 
+    <% end %>
+    
