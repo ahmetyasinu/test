@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
   resources :drivers
-  root 'drivers#index'
+  root 'drivers#index', as: :authenticated_root
   resources :vehicles
   root 'vehicles#index'
-  
- 
 end
  
   

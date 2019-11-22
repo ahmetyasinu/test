@@ -31,7 +31,7 @@ class DriversController < ApplicationController
     end
   
     def update
-      set-driver
+      set_driver
       respond_to do |format|
         if @driver.update(driver_params)
           format.html { redirect_to @driver, notice: 'Driver was successfully updated.' }
@@ -45,7 +45,7 @@ class DriversController < ApplicationController
   
     def destroy
       set_driver
-      @driver.destroy
+      @driver.destroy(driver)
       respond_to do |format|
         format.html { redirect_to drivers_url, notice: 'Driver was successfully destroyed.' }
         format.json { head :no_content }
